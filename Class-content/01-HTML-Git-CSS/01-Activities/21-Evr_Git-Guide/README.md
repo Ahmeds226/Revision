@@ -18,15 +18,15 @@ While GitHub has changed their default branch conventions, your local machine wi
 
 To check the version of Git that you have installed on your local machine, enter the following command in the command line:
 
-  ```bash
-  git --version
-  ```
+```bash
+git --version
+```
 
 If your version of Git is 2.28 or older, you'll first need to update Git.
 
-* Windows users can visit the [Downloading Git website](https://git-scm.com/download/win) and download the latest "64-bit Git for Windows Setup" file.
+- Windows users can visit the [Downloading Git website](https://git-scm.com/download/win) and download the latest "64-bit Git for Windows Setup" file.
 
-* Mac users can use Homebrew to update their version of Git:
+- Mac users can use Homebrew to update their version of Git:
 
   ```bash
   brew upgrade git
@@ -34,9 +34,9 @@ If your version of Git is 2.28 or older, you'll first need to update Git.
 
 To set the default branch to `main`, both Windows and Mac users will run the following command:
 
-  ```bash
-  git config --global init.defaultBranch main
-  ```
+```bash
+git config --global init.defaultBranch main
+```
 
 You will not get a confirmation message. If the configuration is successful, it will simply return to the command-line prompt.
 
@@ -48,42 +48,42 @@ Using `git init` also allows us to turn any existing project into a Git reposito
 
 Start by creating a new project directory named `git-init-sample` on your local machine. Ideally, you should have a parent directory to store all of your projects for this course:
 
-  ```bash
-  mkdir git-init-sample
-  ```
+```bash
+mkdir git-init-sample
+```
 
 Next, use `cd` to navigate into the new directory and add an `index.html` file using the `touch` command:
 
-  ```bash
-  cd git-init-sample
-  touch index.html
-  ```
+```bash
+cd git-init-sample
+touch index.html
+```
 
 To initialize this folder as a Git repository, use `git init`. We need to be in the project folder when we run this command!
 
-  ```bash
-  git init
-  ```
+```bash
+git init
+```
 
 This creates a new subdirectory named `.git` that contains all of your necessary repository files&mdash;a Git repository skeleton. At this point, nothing in your project is tracked yet. To start version-controlling the existing files in your project, you need to start tracking those files and do an initial commit.
 
 First let's run `git status` to check the status of the files:
 
-  ```bash
-  git status
-  ```
+```bash
+git status
+```
 
 We should see that `index.html` is currently untracked. Let's add that file to be tracked:
 
-  ```bash
-  git add -A
-  ```
+```bash
+git add -A
+```
 
 Now if we run `git status` again, we should see that the file is being tracked and is ready to be committed:
 
-  ```bash
-  git commit -m "initial commit"
-  ```
+```bash
+git commit -m "initial commit"
+```
 
 Now we are ready to connect the local repository to a remote repository on GitHub!
 
@@ -93,11 +93,11 @@ To create a remote repository to store the code, navigate to [GitHub](https://gi
 
 Click the "Create Repository" button. Then copy the code under the header "…or push an existing repository from the command line". It should look like the following example:
 
-  ```bash
-  git remote add origin <the HTTPS or SSH URL ending in .git>
-  git branch -M main
-  git push -u origin main
-  ```
+```bash
+git remote add origin <the HTTPS or SSH URL ending in .git>
+git branch -M main
+git push -u origin main
+```
 
 > **Note**: If you successfully set your local default branch to `main`, you do not have to run the `git branch -M main` command.
 
@@ -113,15 +113,15 @@ Before each class, it is important that we do a `git pull` to pull down any chan
 
 To perform a `git pull`, first navigate to the corresponding project directory, which in this case will be `git-init-sample`:
 
-  ```bash
-  cd git-init-sample
-  ```
+```bash
+cd git-init-sample
+```
 
 Next, use `git pull` to pull down any changes from the remote `git-init-sample` repository. Just like when we did a `git push`, we use `origin` to represent the original directory&mdash;or more precisely the original repository's URL&mdash;followed by the name of the branch, which is `main`:
 
-  ```bash
-  git pull origin main
-  ```
+```bash
+git pull origin main
+```
 
 Right now, the local repository is up to date with the remote repository, so you'll get a message that says "Already up to date". This means that the local version of your repository is up to date with the remote version being hosted on GitHub.
 
@@ -148,4 +148,5 @@ For more information, refer to the [Atlassian guide on setting up a repository](
 For more information, read the [Atlassian guide on git pull](https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-config).
 
 ---
+
 © 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

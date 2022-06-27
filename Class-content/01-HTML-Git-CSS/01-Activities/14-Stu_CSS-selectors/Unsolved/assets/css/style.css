@@ -1,9 +1,11 @@
 /* TODO: Label selector type */
+/* Global selector */
 * {
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  }
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
 
 /* TODO: Label selector type */
+/* Element selector */
 body {
   background-color: lemonchiffon;
 }
@@ -23,11 +25,13 @@ figure {
 }
 
 /* TODO: Label selector type */
+/* class highlighted-text */
 .highlighted-text {
   font-weight: bolder;
 }
 
 /* TODO: Label selector type */
+/* id contact-section */
 #contact-section {
   background-color: #f0ead6;
 }
